@@ -1,0 +1,7 @@
+{
+  "Author": "smrq",
+  "Name": "Critical HP Indicator",
+  "Punchline": "Shows party list HP bars in red when HP is critical.",
+  "Description": "Shows party list HP bars in red when HP is critical.",
+  "ApplicableVersion": "any"
+}
