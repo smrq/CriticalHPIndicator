@@ -1,7 +1,7 @@
 [
     {
         "Author": "smrq",
-        "Name": "CriticalHPIndicator",
+        "Name": "Critical HP Indicator",
         "InternalName": "CriticalHPIndicator",
         "Description": "Shows party list HP bars in red when HP is critical.",
         "AssemblyVersion": "0.0.0.1",

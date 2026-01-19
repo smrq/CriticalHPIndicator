@@ -1,4 +1,4 @@
-# CriticalHPIndicator
+# Critical HP Indicator
 
 Shows party list HP bars in red when HP is critical.
 
