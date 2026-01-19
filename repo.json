@@ -4,14 +4,14 @@
         "Name": "CriticalHPIndicator",
         "InternalName": "CriticalHPIndicator",
         "Description": "Shows party list HP bars in red when HP is critical.",
-        "AssemblyVersion": "0.0.0.0",
-        "TestingAssemblyVersion": "0.0.0.0",
+        "AssemblyVersion": "0.0.0.1",
+        "TestingAssemblyVersion": "0.0.0.1",
         "RepoUrl": "https://github.com/smrq/CriticalHPIndicator",
         "ApplicableVersion": "any",
         "DalamudApiLevel": 14,
         "IconUrl": "https://github.com/smrq/CriticalHPIndicator/raw/master/icon.png",
-        "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.0/latest.zip",
-        "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.0/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.0/latest.zip"
+        "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.1/latest.zip",
+        "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.1/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.1/latest.zip"
     }
 ]
