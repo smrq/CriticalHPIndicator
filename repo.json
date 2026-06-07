@@ -8,7 +8,7 @@
         "TestingAssemblyVersion": "0.0.0.2",
         "RepoUrl": "https://github.com/smrq/CriticalHPIndicator",
         "ApplicableVersion": "any",
-        "DalamudApiLevel": 14,
+        "DalamudApiLevel": 15,
         "IconUrl": "https://github.com/smrq/CriticalHPIndicator/raw/master/icon.png",
         "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/latest.zip",
         "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/latest.zip",
