@@ -1,0 +1,33 @@
+name: Prepare Environment
+description: Prepares the Dalamud build environment.
+inputs:
+  dalamud-distrib:
+    description: The Dalamud distribution branch to download, ending in a /.
+    required: false
+    type: string
+    default: ''
+  project:
+    description: The project that is being built.
+    type: string
+    required: true
+  
+runs:
+  using: composite
+  steps:
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: 10.x.x
+        cache: true
+        cache-dependency-path: ./${{ inputs.project }}/packages.lock.json
+
+    - name: Restore depdendencies
+      shell: bash
+      run: dotnet restore
+
+    - name: Download Dalamud
+      shell: bash
+      run: |
+        wget https://goatcorp.github.io/dalamud-distrib/${{ inputs.dalamud-distrib }}latest.zip -O /tmp/dalamud.zip
+        mkdir -p $HOME/.xlcore/dalamud/Hooks/dev
+        unzip /tmp/dalamud.zip -d /home/runner/.xlcore/dalamud/Hooks/dev

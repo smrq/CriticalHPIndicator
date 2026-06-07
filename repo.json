@@ -10,8 +10,8 @@
         "ApplicableVersion": "any",
         "DalamudApiLevel": 15,
         "IconUrl": "https://github.com/smrq/CriticalHPIndicator/raw/master/icon.png",
-        "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/latest.zip",
-        "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/latest.zip"
+        "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip",
+        "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip",
+        "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip"
     }
 ]

@@ -1,0 +1,55 @@
+name: Build
+description: Builds the checked out branch and creates a zip archive.
+inputs:
+  configuration:
+    description: The configuration to build (Debug or Release).
+    required: false
+    type: string
+    default: Release
+  project:
+    description: The project that is being built.
+    type: string
+    required: true
+  version:
+    description: The version number of the assembly.
+    type: string
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - name: Build Solution
+      env:
+        VERSION: ${{ inputs.version }}
+        CONFIGURATION: ${{ inputs.configuration }}
+      shell: bash
+      run: |
+        if [ -n "$VERSION" ]; then
+          dotnet build --no-restore --nologo --configuration "$CONFIGURATION" \
+            -p:Version="$VERSION" \
+            -p:FileVersion="$VERSION" \
+            -p:AssemblyVersion="$VERSION"
+        else
+          dotnet build --no-restore --nologo --configuration "$CONFIGURATION"
+        fi
+
+    - name: Update ${{ inputs.project }}.json
+      env:
+        VERSION: ${{ inputs.version }}
+        PROJECT_JSON: ./${{ inputs.project }}/bin/${{ inputs.configuration }}/${{ inputs.project }}.json
+      shell: bash
+      run: |
+        if [ -n "$VERSION" ]; then
+          jq --arg version "$VERSION" '.AssemblyVersion = $version' "$PROJECT_JSON" > /tmp/project.json
+          mv /tmp/project.json "$PROJECT_JSON"
+        fi
+
+    - name: Create Archive
+      env:
+        PROJECT_ZIP: ${{ inputs.project }}.zip
+        BUILD_DIR: ./${{ inputs.project }}/bin/${{ inputs.configuration }}
+      shell: bash
+      run: |
+        pushd $BUILD_DIR > /dev/null
+        zip -r "$OLDPWD/$PROJECT_ZIP" .
+        popd > /dev/null

@@ -1,0 +1,55 @@
+name: Update repo.json
+description: Update the repo.json file in the main branch.
+inputs:
+  token:
+    description: The GitHub secret token.
+    required: true
+  project:
+    description: The project that is being built.
+    type: string
+    required: true
+  version:
+    description: The version number of the assembly.
+    type: string
+    required: false
+  testing:
+    description: Whether this is a testing version.
+    type: bool
+    required: false
+    default: false
+  branch:
+    description: The branch to update.
+    type: string
+    required: false
+    default: master
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+      uses: actions/checkout@v6
+      with:
+        ref: ${{ inputs.branch }}
+
+    - name: Update repo.json
+      env:
+        REPO_JSON: repo.json
+        VERSION: ${{ inputs.version }}
+        REF_NAME: ${{ github.ref_name }}
+        IS_TESTING: ${{ inputs.testing }}
+      shell: bash
+      run: |
+        chmod +x .github/actions/update-repo/update-repo.sh
+        .github/actions/update-repo/update-repo.sh > /tmp/repo.json
+        mv /tmp/repo.json repo.json
+
+    - name: Commit
+      shell: bash
+      run: |
+        git config --local user.name "github-actions [bot]"
+        git config --local user.email "github-actions@users.noreply.github.com"
+        git add repo.json
+        git commit -m "Update repo.json for ${{ github.ref_name }}"
+        git push origin ${{ inputs.branch }}
