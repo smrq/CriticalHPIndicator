@@ -1,17 +1,17 @@
 [
-    {
-        "Author": "smrq",
-        "Name": "Critical HP Indicator",
-        "InternalName": "CriticalHPIndicator",
-        "Description": "Shows party list HP bars in red when HP is critical.",
-        "AssemblyVersion": "0.0.0.2",
-        "TestingAssemblyVersion": "0.0.0.2",
-        "RepoUrl": "https://github.com/smrq/CriticalHPIndicator",
-        "ApplicableVersion": "any",
-        "DalamudApiLevel": 15,
-        "IconUrl": "https://github.com/smrq/CriticalHPIndicator/raw/master/icon.png",
-        "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip",
-        "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip",
-        "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.2/CriticalHPIndicator.zip"
-    }
+  {
+    "Author": "smrq",
+    "Name": "Critical HP Indicator",
+    "InternalName": "CriticalHPIndicator",
+    "Description": "Shows party list HP bars in red when HP is critical.",
+    "AssemblyVersion": "0.0.0.3",
+    "TestingAssemblyVersion": "0.0.0.3",
+    "RepoUrl": "https://github.com/smrq/CriticalHPIndicator",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 15,
+    "IconUrl": "https://github.com/smrq/CriticalHPIndicator/raw/master/icon.png",
+    "DownloadLinkInstall": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.3/CriticalHPIndicator.zip",
+    "DownloadLinkTesting": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.3/CriticalHPIndicator.zip",
+    "DownloadLinkUpdate": "https://github.com/smrq/CriticalHPIndicator/releases/download/v0.0.0.3/CriticalHPIndicator.zip"
+  }
 ]
